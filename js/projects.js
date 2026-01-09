@@ -114,7 +114,7 @@ const projects = [
 	language: "Italian",
     difficulty: "Intermediate",
 	year: 2025,
-	thumbnail: "assets/thumbnails/TDR.png",
+	thumbnail: "assets/thumbnails/tdr.png",
     github: "https://github.com/leochieco/Tutorials/tree/main/TDR"
   }      
   
