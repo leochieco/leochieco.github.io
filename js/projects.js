@@ -69,7 +69,7 @@ const projects = [
 	language: "Italian",
     difficulty: "Advanced",
 	year: 2025,
-	thumbnail: "assets/thumbnails/MPPT.png",
+	thumbnail: "assets/thumbnails/mppt.png",
     github: "https://github.com/leochieco/Tutorials/tree/main/MPPT"
   }  
  
@@ -84,7 +84,7 @@ const projects = [
 	language: "English, Italian",
     difficulty: "Advanced",
 	year: 2025,
-	thumbnail: "assets/thumbnails/Sensor_fusion.png",
+	thumbnail: "assets/thumbnails/sensor_fusion.png",
     github: "https://github.com/leochieco/Tutorials/tree/main/SensorFusion"
   }  
  
