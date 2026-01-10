@@ -176,6 +176,10 @@ footer {
   opacity: 0.8;
 }
 
+            /* rimuove ombre o filtri */
+}
+
+
 .home-card {
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -187,19 +191,24 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;   /* togli qualunque colore */
+  padding: 0;                /* niente padding aggiuntivo */
 }
 
 .home-card-logo img {
-  max-width: 140px;
-  max-height: 140px;
-  object-fit: contain;
+
+  width: 180px;
+  height: 180px;
+  object-fit: cover;  /* riempie tutto il box */
+  background: transparent;
 }
+
 
 .home-card-content h2 {
   margin-top: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .home-card {
     grid-template-columns: 1fr;
     text-align: center;
@@ -221,7 +230,7 @@ footer {
   font-size: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .home-slogan {
     font-size: 1.6rem;
   }
@@ -272,7 +281,7 @@ footer {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .site-title {
     font-size: 1.6rem;
   }
@@ -318,12 +327,21 @@ footer {
   font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px)) {
   .safety-banner {
     font-size: 1rem;
   }
 }
 
 
-
+@media (max-width: 576px) {
+  .home-card-logo img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+  
+  .home-slogan {
+    font-size: 1.2rem;
+  }
+}
 
