@@ -1,50 +1,68 @@
+
 function loadHeader() {
   const header = document.getElementById("site-header");
 
   header.innerHTML = `
     <div class="header-left">
       <img src="assets/logo/logo.png" class="logo" alt="Logo">
-      <span class="site-title">Electronics with Leo</span>
+      <span class="site-title">  Electronics with Leo</span>
     </div>
+
+    <button class="menu-toggle" aria-label="Toggle menu">
+      ☰
+    </button>
 
     <nav class="main-nav">
       <a href="index.html">Home</a>
-	  <!--    
-      <a href="index.html?category=electronics">Electronics</a>
-      <a href="index.html?category=automation">Automation</a>
-      -->  
       <a href="about.html">About me</a>
     </nav>
-
-
-    <div class="header-right">
- <!-- 
-      <a href="https://www.linkedin.com/in/leonardo-chieco-53550b129" target="_blank" aria-label="LinkedIn  ">
-        LinkedIn
-      </a>
- -->
-	</div>
-	  
   `;
-}
 
+  const toggle = header.querySelector(".menu-toggle");
+  const nav = header.querySelector(".main-nav");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+}
 
 
 function loadProjects() {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
 
+
+  
+  
+
   projects.forEach(p => {
     const card = document.createElement("div");
     card.className = "project-card";
-    card.innerHTML = `
-      <img src="${p.thumbnail}" alt="${p.title}" loading="lazy">
-      <div class="project-card-content">
-        <span class="badge">${p.difficulty}</span>
-        <h3>${p.title}</h3>
-        <p>${p.description_brief}</p>
-      </div>
-    `;
+ 
+const flags = p.language
+  ? p.language.split(",").map(l => l.trim()).map(l => {
+      if (l.toLowerCase().startsWith("italian")) return "🇮🇹";
+      if (l.toLowerCase().startsWith("english")) return "🇬🇧";
+      return "";
+    }).join(" ")
+  : "";
+
+card.innerHTML = `
+  <img src="${p.thumbnail}" alt="${p.title}" loading="lazy">
+  <div class="project-card-content">
+    <div class="card-top">
+      <span class="badge ${p.difficulty}">${p.difficulty}</span>
+      <span class="flags">${flags}</span>
+    </div>
+    <h3>${p.title}</h3>
+    <div class="meta">${p.category}</div>
+    <p>${p.description_brief}</p>
+  </div>
+`;
+ 
+ 
+ 
+ 
     card.onclick = () => window.location.href = "project.html?id=" + p.id;
     grid.appendChild(card);
   });
@@ -71,6 +89,8 @@ function loadProjectPage() {
   const id = new URLSearchParams(window.location.search).get("id");
   const p = projects.find(x => x.id === id);
   if (!p) return;
+  
+ 
 
   container.innerHTML = `
     <h1>${p.title}</h1>

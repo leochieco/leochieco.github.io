@@ -2,34 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>404 | Signal Lost</title>
-  <style>
-    body {
-      margin: 0;
-      background: black;
-      overflow: hidden;
-      cursor: pointer;
-    }
-    canvas {
-      display: block;
-    }
-    .hint {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
-      color: #0f0;
-      font-family: monospace;
-      font-size: 14px;
-      opacity: 0.6;
-    }
-  </style>
+  <title>Error 404 — Page not found</title>
+  <link rel="stylesheet" href="css/404.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Error 404</h1>
+    <p>Oops! Page not found.</p>
 
-<canvas id="scope"></canvas>
-<div class="hint">Signal lost · Click anywhere to return home</div>
+    <div class="monster">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="mouth"></div>
+      <div class="hand left"></div>
+      <div class="hand right"></div>
+    </div>
 
-<script src="js/404.js"></script>
+    <button id="interactBtn">Go back</button>
+  </div>
+
+  <script src="js/404.js"></script>
 </body>
 </html>

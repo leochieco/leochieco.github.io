@@ -1,0 +1,105 @@
+body, html {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  font-family: 'Arial', sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: #f0f0f0;
+}
+
+.container {
+  text-align:center;
+}
+
+h1 {
+  font-size:5rem;
+  color:#333;
+  margin:0;
+}
+
+p {
+  font-size:1.5rem;
+  color:#666;
+  margin:1rem 0 2rem;
+}
+
+/* Monster base */
+.monster {
+  position: relative;
+  margin:2rem auto;
+  width:140px;
+  height:140px;
+  background: #ffcc00;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  animation: float 2s infinite ease-in-out;
+}
+
+/* Eyes */
+.eye {
+  position:absolute;
+  width:20px;
+  height:20px;
+  background:#fff;
+  border-radius:50%;
+  top:40px;
+}
+.eye.left { left:30px; }
+.eye.right { right:30px; }
+.eye::after {
+  content:'';
+  display:block;
+  width:10px;
+  height:10px;
+  background:#000;
+  border-radius:50%;
+  margin:5px;
+}
+
+/* Mouth */
+.mouth {
+  position:absolute;
+  width:60px;
+  height:20px;
+  bottom:30px;
+  background:#000;
+  border-radius:0 0 30px 30px;
+  transition: height 0.3s;
+}
+
+/* Hands */
+.hand {
+  position:absolute;
+  width:20px;
+  height:40px;
+  background:#ffcc00;
+  border-radius:10px;
+  top:70px;
+  transition: transform 0.3s;
+}
+.hand.left { left:-25px; transform-origin: top right; }
+.hand.right { right:-25px; transform-origin: top left; }
+
+#interactBtn {
+  padding:10px 20px;
+  font-size:1.2rem;
+  background:#ff6347;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition: transform 0.2s;
+}
+#interactBtn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
