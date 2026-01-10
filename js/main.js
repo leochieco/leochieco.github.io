@@ -49,21 +49,27 @@ const flags = p.language
     }).join(" ")
   : "";
 
-card.innerHTML = `
-  <img src="${p.thumbnail}" alt="${p.title}" loading="lazy">
-  <div class="project-card-content">
-    <div class="card-top">
-      <span class="badge ${p.difficulty}">${p.difficulty}</span>
-      <span class="flags">${flags}</span>
-    </div>
-    <h3>${p.title}</h3>
-    <div class="meta">${p.category}</div>
-    <p>${p.description_brief}</p>
-  </div>
-`;
- 
- 
- 
+	 
+	card.innerHTML = `
+	  <img src="${p.thumbnail}" alt="${p.title}" loading="lazy">
+	  <div class="project-card-content">
+		
+		<!-- Badge difficoltà -->
+		<div class="badges-container">
+		  <div class="badge-row">
+			<span class="badge badge-difficulty">${p.difficulty}</span>
+		  </div>
+		  
+		  <!-- Badge categorie -->
+		  <div class="badge-row">
+			${p.category.split(',').map(cat => `<span class="badge badge-category">${cat.trim()}</span>`).join(' ')}
+		  </div>
+		</div>
+
+		<h3>${p.title}</h3>
+		<p>${p.description_brief}</p>
+	  </div>
+	`;
  
     card.onclick = () => window.location.href = "project.html?id=" + p.id;
     grid.appendChild(card);
@@ -75,8 +81,7 @@ function loadFooter() {
   const footer = document.createElement("footer");
   footer.innerHTML = `
     <p>
-      © ${new Date().getFullYear()} Electronics with Leo |
-      <a href="https://www.linkedin.com/in/leonardo-chieco-53550b129" target="_blank">LinkedIn</a>
+      © ${new Date().getFullYear()} "Electronics with Leo"
     </p>
   `;
   document.body.appendChild(footer);

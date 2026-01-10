@@ -134,7 +134,7 @@ header {
 .home-section {
   max-width: 900px;
   margin: 3rem auto;
-  padding: 0 20px; /* margini uniformi */
+  padding: 0 20px;
 }
 
 .home-card {
@@ -237,7 +237,7 @@ header {
   border-left: 4px solid #ff9800;
   padding: 14px 18px;
   margin: 2rem 20px;
-  font-size: 0.95rem;
+  font-size: 1.15rem; /* aumentato font desktop */
   color: #5c3b00;
   border-radius: 6px;
 }
@@ -253,7 +253,7 @@ header {
 
 @media (max-width: 768px) {
   .safety-banner {
-    font-size: 1rem;
+    font-size: 1.2rem; /* aumentato font mobile */
   }
 }
 
@@ -294,7 +294,7 @@ footer {
 .about {
   max-width: 900px;
   margin: 3rem auto;
-  padding: 0 20px;  /* margini più coerenti */
+  padding: 0 20px;
   line-height: 1.6;
   font-family: 'Roboto', 'Arial', sans-serif;
 }
@@ -314,19 +314,18 @@ footer {
 }
 
 .about-header h1 {
-  font-size: 2rem;   /* titolo grande */
+  font-size: 2rem;
   margin: 0;
   font-weight: 700;
 }
 
 .about-header .subtitle {
-  font-size: 1.2rem; /* sottotitolo leggibile */
+  font-size: 1.2rem;
   opacity: 0.8;
 }
 
-/* Link nella pagina About */
 .about a {
-  font-size: 1.25rem;   /* più leggibile */
+  font-size: 1.25rem;
   color: #1e90ff;
   text-decoration: none;
 }
@@ -358,4 +357,48 @@ footer {
   .main-nav a {
     font-size: 1.1rem;
   }
+}
+
+/* =====================
+   BADGE GENERALE
+   ===================== */
+.badges-container {
+  display: flex;
+  flex-direction: column; /* mette i badge su righe separate */
+  gap: 4px;               /* spazio tra righe */
+}
+
+/* Righe singole dentro badges-container */
+.badges-container .badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* spazio tra i badge della stessa riga */
+}
+
+/* =====================
+   BADGE DIFFICOLTÀ
+   ===================== */
+.badge-difficulty {
+  background: #2196F3; /* blu */
+  color: #fff;
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* =====================
+   BADGE CATEGORIA
+   ===================== */
+.badge-category {
+  background: #FF7043; /* arancio */
+  color: #fff;
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: capitalize;
 }

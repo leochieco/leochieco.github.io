@@ -125,7 +125,7 @@ const projects = [
     title: "Peltier cells",
     description_brief: "Peltier cells can generate hot and cold surfaces with nothing more than a power supply—but what’s really happening inside? This tutorial breaks down the physics behind thermoelectric cooling and shows how to model and simulate a Peltier cell in SPICE, including its behavior under thermal disturbances and PI/PID control. A clear, hands-on guide to turning thermoelectric theory into practical electronic design.",
     description: "Have you ever seen those small white modules, about the size of a coin, capable of producing cold on one side and heat on the other simply by connecting them to a battery? These are Peltier cells, thermoelectric devices that directly convert electrical energy into a temperature gradient. You can find them in camping mini-fridges, electronic cooling systems, and even portable medical devices. But how do they really work? What is the physics behind this effect? And, most importantly, how can they be modeled and simulated to integrate them into an electronic project using PI or PID controllers? In this tutorial, I will guide you step by step: starting from the basic principles, we will build a SPICE model to understand how a Peltier cell behaves when subjected to thermal disturbances or driven by an electronic controller. In the end, you’ll discover that behind this “pocket refrigerator” there is no magic—only an elegant combination of physics, electronics, and control theory.",
-    category: "Electronics",
+    category: "Electronics, Automatic Control",
 	language: "Italian",
     difficulty: "Beginner",
 	year: 2025,
