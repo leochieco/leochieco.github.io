@@ -1,4 +1,5 @@
 
+
 function loadHeader() {
   const header = document.getElementById("site-header");
 
@@ -8,7 +9,7 @@ function loadHeader() {
       <span class="site-title">  Electronics with Leo</span>
     </div>
 
-    <button class="menu-toggle" aria-label="Toggle menu">
+    <button class="menu-toggle" aria-label="Open menu">
       ☰
     </button>
 
@@ -25,6 +26,7 @@ function loadHeader() {
     nav.classList.toggle("open");
   });
 }
+
 
 
 function loadProjects() {

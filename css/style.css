@@ -1,117 +1,202 @@
+/* =====================
+   FONT
+   ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap');
+
+/* =====================
+   BASE
+   ===================== */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+  box-sizing: border-box;
 }
 
+/* =====================
+   HEADER
+   ===================== */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 20px;
-  background: white;
-  border-bottom: 1px solid #ddd;
+  flex-wrap: nowrap;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  background: #fff;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo + titolo */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  white-space: nowrap;
 }
 
 .logo {
-  height: 48px;
+  height: 80px;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .site-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
+  color: #222;
+  line-height: 1;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
 }
 
+/* NAV DESKTOP */
+.main-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.main-nav a:hover {
+  color: #1e90ff;
+}
+
+/* Hamburger mobile */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
-/* NAV DESKTOP */
-.main-nav {
-  display: flex;
-  gap: 20px;
+/* =====================
+   MOBILE HEADER
+   ===================== */
+@media (max-width: 922px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .header-left {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    border-top: 1px solid #ddd;
+    z-index: 100;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    border-top: 1px solid #eee;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
-.main-nav a {
-  font-size: 1rem;
-  font-weight: 600;
+/* =====================
+   HOME HERO
+   ===================== */
+.home-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 20px; /* margini uniformi */
 }
 
-
-
-
-
-.header-left {
-  display: flex;
+.home-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
   align-items: center;
 }
 
-.main-nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #333;
+.home-card-logo img {
+  width: 160px;
+  height: auto;
+}
+
+.home-slogan {
+  text-align: center;
+  font-size: 1.8rem;
   font-weight: 500;
+  line-height: 1.3;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  margin: 0;
 }
 
-.main-nav a:hover {
-  text-decoration: underline;
+/* Mobile hero */
+@media (max-width: 768px) {
+  .home-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .home-slogan {
+    font-size: 1.4rem;
+  }
 }
 
-.header-right a {
-  font-size: 0.9em;
-  color: #0a66c2;
-  text-decoration: none;
-}
-
-
- 
-
- 
-
+/* =====================
+   PROJECT GRID
+   ===================== */
 #projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 24px;
-  padding: 24px;
+  padding: 24px 20px;
 }
 
 .project-card {
-  background: white;
-  border-radius: 8px;
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
- /* transition: transform 0.2s; */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Roboto', sans-serif;
 }
-
- 
- 
 
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
-
-.project-card img {
-  height: 180px;
-  object-fit: cover;
-  background: #fafafa;
-}
-
-
 .project-card img {
   width: 100%;
-  height: 180px;          /* altezza uniforme */
-  object-fit: contain;    /* mostra tutta l’immagine */
-  /*background-color: transparent;*/
+  height: 180px;
+  object-fit: contain;
   background: #fafafa;
   padding: 8px;
 }
@@ -120,43 +205,98 @@ header {
   padding: 16px;
 }
 
+.project-card-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.project-card-content p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
 .badge {
   display: inline-block;
   padding: 4px 8px;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   border-radius: 4px;
   background: #1e90ff;
-  color: white;
+  color: #fff;
 }
 
+/* =====================
+   SAFETY WARNING BOX
+   ===================== */
+.safety-banner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #fff4e5;
+  border-left: 4px solid #ff9800;
+  padding: 14px 18px;
+  margin: 2rem 20px;
+  font-size: 0.95rem;
+  color: #5c3b00;
+  border-radius: 6px;
+}
+
+.safety-banner .icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.safety-banner p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .safety-banner {
+    font-size: 1rem;
+  }
+}
+
+/* =====================
+   PAGE CONTENT
+   ===================== */
+.page-content,
+.about,
+.project-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
 footer {
   text-align: center;
-  padding: 24px;
-  font-size: 0.85em;
+  padding: 24px 20px;
+  font-size: 0.85rem;
   color: #666;
 }
 
-.page-content {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.6;
+/* =====================
+   HOME CARD / LOGO
+   ===================== */
+.home-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.home-section {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  line-height: 1.6;
-}
-
-.home-section h2 {
-  margin-bottom: 1rem;
-}
+/* =====================
+   ABOUT PAGE
+   ===================== */
 .about {
-  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
   margin: 3rem auto;
-  padding: 0 1rem;
+  padding: 0 20px;
 }
 
 .about-header {
@@ -176,172 +316,24 @@ footer {
   opacity: 0.8;
 }
 
-            /* rimuove ombre o filtri */
-}
-
-
-.home-card {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.home-card-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;   /* togli qualunque colore */
-  padding: 0;                /* niente padding aggiuntivo */
-}
-
-.home-card-logo img {
-
-  width: 180px;
-  height: 180px;
-  object-fit: cover;  /* riempie tutto il box */
-  background: transparent;
-}
-
-
-.home-card-content h2 {
-  margin-top: 0;
-}
-
-@media (max-width: 992px) {
-  .home-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .home-card-logo {
-    margin-bottom: 1rem;
-  }
-
-  .home-card-content ul {
-    text-align: left;
-    display: inline-block;
-  }
-}
-
-
-
-.home-slogan {
-  font-size: 2rem;
-}
-
-@media (max-width: 992px) {
+/* =====================
+   RESPONSIVE ADJUSTMENTS
+   ===================== */
+@media (max-width: 576px) {
   .home-slogan {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
-}
 
+  .home-card-logo img {
+    width: 140px;
+    height: auto;
+  }
 
-
-.home-card {
-  display: grid;
-  grid-template-columns: 180px 1fr; /* logo a sinistra, testo a destra */
-  gap: 2rem;
-  padding: 2rem;
-  cursor: default; /* impedisce il puntatore “manina” */
-
-  /* centratura verticale */
-  align-items: center;  
-}
-
-.home-card:hover {
-  transform: none; /* niente hover zoom / shadow */
-}
-
-.home-card-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-card-logo img {
-  max-width: 140px;
-  max-height: 140px;
-  object-fit: contain;
-}
-
-.home-card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centra verticalmente */
-}
-
-.home-card-content .home-slogan {
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.4;
-  max-width: 700px;
-}
-
-
-
-
-@media (max-width: 992px) {
   .site-title {
-    font-size: 1.6rem;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    flex-direction: column;
-    display: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .main-nav.open {
-    display: flex;
+    font-size: 1.4rem;
   }
 
   .main-nav a {
-    padding: 14px 20px;
-    font-size: 1.2rem;
-    border-top: 1px solid #eee;
+    font-size: 1.1rem;
   }
 }
-
-
-.safety-banner {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  background: #fff4e5;
-  border-left: 4px solid #ff9800;
-  padding: 12px 20px;
-  font-size: 0.95rem;
-}
-
-.safety-banner .icon {
-  font-size: 1.5rem;
-}
-
-@media (max-width: 992px)) {
-  .safety-banner {
-    font-size: 1rem;
-  }
-}
-
-
-@media (max-width: 576px) {
-  .home-card-logo img {
-    max-width: 140px;
-    max-height: 140px;
-  }
-  
-  .home-slogan {
-    font-size: 1.2rem;
-  }
-}
-
