@@ -79,11 +79,25 @@ const flags = p.language
 
 function loadFooter() {
   const footer = document.createElement("footer");
+  footer.className = "site-footer";
+
   footer.innerHTML = `
-    <p>
-      © ${new Date().getFullYear()} "Electronics with Leo"
-    </p>
+    <p>© ${new Date().getFullYear()} Electronics with Leo</p>
+
+    <form action="https://www.paypal.com/donate" method="post" target="_top" class="paypal-form">
+      <input type="hidden" name="hosted_button_id" value="Z7ZR2HPRELQ6Q" />
+      <button class="paypal-btn">
+        💙 Support via PayPal
+      </button>
+    </form>
+
+	<p class="legal-note">
+		This website is free and independent. Donations are voluntary and do not grant
+		access to paid content or services.
+	</p>
+
   `;
+
   document.body.appendChild(footer);
 }
 

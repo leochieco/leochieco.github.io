@@ -269,7 +269,7 @@ header {
 .safety-banner {
   display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: center;
   background: #fff4e5;
   border-left: 4px solid #ff9800;
   padding: 14px 18px;
@@ -278,6 +278,17 @@ header {
   color: #5c3b00;
   border-radius: 6px;
 }
+
+.safety-banner .icon {
+  font-size: 2.4rem;        /* icona più grande */
+  line-height: 1;
+  flex-shrink: 0;           /* evita che si restringa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 @media (max-width: 768px) {
   .safety-banner {
@@ -311,4 +322,55 @@ footer {
   padding: 24px 20px;
   font-size: 0.85rem;
   color: #666;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 0.85rem;
+  color: #666;
+  background: #f5f5f5;
+}
+
+.paypal-form {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.paypal-btn {
+  padding: 10px 18px;
+  background: #0070ba;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.paypal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.footer-note {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 8px;
+}
+
+.legal-note {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  max-width: 800px;
+  margin: 8px auto 0;
+  line-height: 1.4;
 }
