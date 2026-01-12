@@ -129,6 +129,13 @@ header {
   .menu-toggle {
     display: block;
   }
+   
+  .about-header .avatar {
+    width: 96px;
+    height: 96px;
+  }
+ 
+
 }
 
 /* =====================
@@ -287,6 +294,13 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.about-header .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* =====================
