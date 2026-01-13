@@ -252,7 +252,15 @@ header {
   font-size: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
+  
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  
 }
+
+
+
 
 .badge-category {
   background: #FF7043;
@@ -374,3 +382,6 @@ footer {
   margin: 8px auto 0;
   line-height: 1.4;
 }
+
+
+

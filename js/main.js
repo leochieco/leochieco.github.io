@@ -33,38 +33,42 @@ function loadProjects() {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
 
-
-  
-  
-
   projects.forEach(p => {
     const card = document.createElement("div");
     card.className = "project-card";
  
-const flags = p.language
-  ? p.language.split(",").map(l => l.trim()).map(l => {
-      if (l.toLowerCase().startsWith("italian")) return "🇮🇹";
-      if (l.toLowerCase().startsWith("english")) return "🇬🇧";
-      return "";
-    }).join(" ")
-  : "";
+	const flags = p.language
+	  ? p.language.split(",").map(l => l.trim()).map(l => {
+		  if (l.toLowerCase().startsWith("italian")) return "🇮🇹";
+		  if (l.toLowerCase().startsWith("english")) return "🇬🇧";
+		  return "";
+		}).join(" ")
+	  : "";
+
 
 	 
 	card.innerHTML = `
 	  <img src="${p.thumbnail}" alt="${p.title}" loading="lazy">
 	  <div class="project-card-content">
 		
-		<!-- Badge difficoltà -->
 		<div class="badges-container">
+
+		  <!-- riga difficoltà + lingua -->
+       
 		  <div class="badge-row">
 			<span class="badge badge-difficulty">${p.difficulty}</span>
+			<span class="badge-flags">${flags}</span>
 		  </div>
-		  
-		  <!-- Badge categorie -->
+
+		  <!-- Riga categorie -->
 		  <div class="badge-row">
-			${p.category.split(',').map(cat => `<span class="badge badge-category">${cat.trim()}</span>`).join(' ')}
+			${p.category
+			  .split(',')
+			  .map(cat => `<span class="badge badge-category">${cat.trim()}</span>`)
+			  .join('')}
 		  </div>
 		</div>
+ 
 
 		<h3>${p.title}</h3>
 		<p>${p.description_brief}</p>
