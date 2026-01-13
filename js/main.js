@@ -91,7 +91,7 @@ function loadFooter() {
     <form action="https://www.paypal.com/donate" method="post" target="_top" class="paypal-form">
       <input type="hidden" name="hosted_button_id" value="Z7ZR2HPRELQ6Q" />
         <button class="paypal-btn">
-			<span class="heart">❤</span> Support via PayPal
+		    Support the project <span class="heart">♥</span>
 		</button>
     </form>
 
