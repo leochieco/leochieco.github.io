@@ -148,7 +148,20 @@ const projects = [
     github: "https://github.com/leochieco/Tutorials/tree/main/HF_Transformers"
   }     
  
-
+  ,
+  
+   {
+    id: "GENETIC_ALGORITHMS",
+    title: "Genetic Algorithms: A Practical Introduction",
+    description_brief: "This tutorial provides a clear and practical introduction to Genetic Algorithms (GAs), explaining their fundamental concepts and evolutionary workflow.",
+    description: "This tutorial offers a concise and practical introduction to Genetic Algorithms (GAs), covering their core concepts and workflow.<BR>Through a simple example (solving a system of three linear equations) it shows how a population of solutions evolves toward the correct result.<BR>The focus is on clarity and intuition, making the material accessible to beginners while demonstrating the power and flexibility of Genetic Algorithms in real-world problem solving",
+    category: "Genetic Algorithms",
+	language: "English",
+    difficulty: "Beginner",
+	year: 2026,
+	thumbnail: "assets/thumbnails/GA.png",
+    github: "https://github.com/leochieco/Tutorials/tree/main/GA"
+  }  
   
 ];
 
