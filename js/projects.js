@@ -161,7 +161,25 @@ const projects = [
 	year: 2026,
 	thumbnail: "assets/thumbnails/GA.png",
     github: "https://github.com/leochieco/Tutorials/tree/main/GA"
+  } ,
+
+   {
+    id: "ZEOS",
+    title: "A Practical Guide to Z80 SBC Firmware Development with SDCC",
+    description_brief: "A practical guide to building a complete Z80 SBC firmware in C and assembly, with interrupt-driven serial I/O and a custom monitor.",
+    description: "This tutorial presents a practical and structured approach to developing firmware for a Z80-based single-board computer using the SDCC toolchain.<BR>Starting from a minimal C runtime, it covers interrupt handling, MC6850 ACIA serial communication, and software interrupt services compatible with classic systems such as NASCOM and CP/M.<BR>A simple yet extensible monitor is implemented, providing memory inspection, modification, and program execution.<BR>The project is inspired by Grant Searle’s Z80 SBC and demonstrates how historical microprocessors remain powerful learning platforms.<BR>It is intended as a solid foundation for further experiments, applications, and educational projects on the Z80.",
+    category: "Firmware",
+	language: "English",
+    difficulty: "Intermediate",
+	year: 2026,
+	thumbnail: "assets/thumbnails/zeos.png",
+    github: " https://github.com/leochieco/Tutorials/tree/main/Z80-ZEOS"
   }  
+  
+  
+ 
+  
+  
   
 ];
 
