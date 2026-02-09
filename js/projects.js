@@ -174,7 +174,22 @@ const projects = [
 	year: 2026,
 	thumbnail: "assets/thumbnails/zeos.png",
     github: " https://github.com/leochieco/Tutorials/tree/main/Z80-ZEOS"
+  } ,
+
+   {
+    id: "SNUBBER",
+    title: "A Practical Guide on protecting mosfets and switching devices from inductive voltage spikes with LTspice simulations.",
+    description_brief: "A practical guide to building a complete Z80 SBC firmware in C and assembly, with interrupt-driven serial I/O and a custom monitor.",
+    description: "In this tutorial, we explore how to protect mosfetss and power switches from inductive transients and voltage ringing generated during coil turn-off.<BR>We take a detailed look at flyback diodes, Zener, and RC snubbers, comparing their impact on turn-off speed, energy dissipation, and overall system dynamics.<BR>Practical design formulas and real LTspice simulations are included to make the concepts clear and reproducible.",
+    category: "Electronics",
+	language: "Italian, English",
+    difficulty: "Intermediate",
+	year: 2026,
+	thumbnail: "assets/thumbnails/snubber.png",
+    github: " https://github.com/leochieco/Tutorials/tree/main/Snubber"
   }  
+  
+  
   
   
  
