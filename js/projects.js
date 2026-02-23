@@ -190,7 +190,20 @@ const projects = [
   }  
   
   
-  
+,
+
+   {
+    id: "LOCKIN",
+    title: "Lock-In Amplifier: from Theory to Simulation.",
+    description_brief: "A practical guide to understanding and simulating lock-in amplifiers for detecting weak signals in noisy environments.",
+    description: "This tutorial provides a comprehensive introduction to lock-in amplifiers, explaining their theory and practical applications.<BR>It shows how synchronous multiplication and selective filtering allow weak signals to be extracted from high levels of noise.<BR>Using LTspice simulations with the AD633 analog multiplier, the tutorial demonstrates signal reconstruction and noise suppression in a controlled environment.<BR>Quadrature detection and amplitude/phase measurement are also explained in detail.<BR>Ideal for engineers and students seeking to understand both the principles and practical implementation of lock-in techniques.",
+    category: "Electronics",
+	language: "Italian, English",
+    difficulty: "Basic",
+	year: 2026,
+	thumbnail: "assets/thumbnails/lockin.png",
+    github: " https://github.com/leochieco/Tutorials/tree/main/Lockin"
+  }    
   
  
   
