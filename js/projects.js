@@ -205,7 +205,21 @@ const projects = [
     github: " https://github.com/leochieco/Tutorials/tree/main/Lockin"
   }    
   
- 
+,
+
+   {
+    id: "ENCODER",
+    title: "Incremental Encoders: How to Emulate Them with a Microcontroller.",
+    description_brief: "This tutorial explains how to emulate incremental quadrature encoder signals using an Arduino Nano.",
+    description: "Learn how to build a programmable incremental encoder emulator with Arduino in this tutorial.<BR>It guides you through generating accurate quadrature A/B signals and a ZERO pulse, using hardware timers for high stability and minimal jitter.<BR>The system includes a binary counter and XOR logic to create the quadrature phase shift.<BR>Signals are converted to differential outputs compatible with industrial PLCs and motion controllers.<BR>The emulator is low-cost, modular, and ideal for testing, calibration, and educational purposes.<BR>Full schematics and software examples are provided for hands-on implementation.",
+    category: "Electronics, Firmware, Automation",
+	language: "Italian, English",
+    difficulty: "Basic",
+	year: 2026,
+	thumbnail: "assets/thumbnails/encoder.png",
+    github: " https://github.com/leochieco/Tutorials/tree/main/Encoder"
+  }    
+  
   
   
   
