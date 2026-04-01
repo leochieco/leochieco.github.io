@@ -220,10 +220,25 @@ const projects = [
     github: " https://github.com/leochieco/Tutorials/tree/main/Encoder"
   }    
   
-  
+ ,
+
+   {
+    id: "Li_Ion_Resistance",
+    title: "Measurement of the Internal Resistance of Lithium Batteries: Practical Implementation.",
+    description_brief: "The tutorial presents a simple method to accurately measure battery internal resistance using AC excitation, inspired by EIS principles, combining basic theory with a practical implementation.",
+    description: "Measuring the internal resistance of an electrochemical cell is essential for assessing its performance and state of health, as it directly influences efficiency and current delivery.<BR>However, accurate measurement is challenging with traditional DC methods due to inherent errors.<BR>This tutorial introduces an approach based on alternating current excitation, enabling more precise and reliable estimation of internal resistance, consistent with EIS principles.<BR>It combines theoretical foundations with a practical circuit implementation, resulting in a solution that is both simple and educational.",
+    category: "Electronics",
+	language: "Italian, English",
+    difficulty: "Advanced",
+	year: 2026,
+	thumbnail: "assets/thumbnails/Li_ion_Resistance.png",
+    github: " https://github.com/leochieco/Tutorials/tree/main/Li_Ion_Resistance_meter"
+  }    
   
   
 ];
+
+
 
 
 const _template_ = [
