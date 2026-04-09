@@ -111,7 +111,7 @@ const projects = [
     description_brief: "Time Domain Reflectometry lets you see inside cables and transmission lines using nothing more than a fast electrical pulse. This tutorial takes you from the fundamentals of reflection and transmission lines to bounce diagrams and LTspice simulations, showing how impedance mismatches and discontinuities reveal themselves in the time domain. Through practical examples and real diagnostic scenarios, you’ll learn how to turn TDR into a powerful tool for analyzing and troubleshooting electronic and communication systems.",
     description: "Time Domain Reflectometry (TDR) is one of the most powerful and fascinating techniques for “seeing” what is normally hidden inside a cable or a transmission line. With a simple pulse or step signal, it is possible to reveal discontinuities, impedance mismatches, and variations that affect signal propagation. In this tutorial, we will take a journey starting from the theoretical foundations of transmission lines and reflection coefficients, moving on to bounce diagrams and practical simulations using LTspice. Concrete examples will be analyzed, ranging from open and short-circuited loads to more complex configurations involving multiple lines, showing how to interpret the results and use them to diagnose real-world problems. The goal is to guide the reader toward a deep understanding of TDR by connecting theory, simulation, and experimental insight, enabling its use as a powerful analysis and design tool in electronics, telecommunications, and system diagnostics.",
     category: "Electronics, Transmission Lines",
-	language: "Italian",
+	language: "Italian, English",
     difficulty: "Intermediate",
 	year: 2025,
 	thumbnail: "assets/thumbnails/tdr.png",
