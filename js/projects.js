@@ -92,7 +92,7 @@ const projects = [
   
    {
     id: "Sensor Tester",
-    title: "Tutorial: How to build an industrial sensors teste",
+    title: "Tutorial: How to build an industrial sensors tester",
     description_brief: "This article shows how to build a modular, battery-powered NPN/PNP sensor tester with LED feedback, current protection, and a battery status indicator. Using LTSpice simulations, the design ensures reliable, immediate verification of sensor functionality, perfect for hobbyists, educators, and professionals alike.",
     description: "This article presents the complete design of a tester for industrial NPN and PNP sensors, powered by two 9V batteries and equipped with both protection features and battery status monitoring. The device was created to meet the common need—in hobbyist, educational, and professional settings—for a simple and reliable tool that allows immediate verification of sensor functionality. The proposed circuit is modular and divided into three main sections:\n1) The tester itself, which identifies the sensor type and indicates activation via an LED.\n2) A current limiter, designed to protect both the sensor and the tester from short circuits or wiring errors.\n3) A battery status indicator, based on a simple transistor stage with a Zener diode, allowing the user to know when the supply voltage drops below the operational threshold.\nDuring the design phase, various LTSpice simulations were used to accurately evaluate the circuit’s behavior under different operating conditions.",
     category: "Electronics, Automation",
