@@ -92,7 +92,7 @@ const projects = [
   
    {
     id: "Sensor Tester",
-    title: "Tutorial: How to build an industrial sensors tester",
+    title: "Tutorial: How to build an industrial sensors teste",
     description_brief: "This article shows how to build a modular, battery-powered NPN/PNP sensor tester with LED feedback, current protection, and a battery status indicator. Using LTSpice simulations, the design ensures reliable, immediate verification of sensor functionality, perfect for hobbyists, educators, and professionals alike.",
     description: "This article presents the complete design of a tester for industrial NPN and PNP sensors, powered by two 9V batteries and equipped with both protection features and battery status monitoring. The device was created to meet the common need—in hobbyist, educational, and professional settings—for a simple and reliable tool that allows immediate verification of sensor functionality. The proposed circuit is modular and divided into three main sections:\n1) The tester itself, which identifies the sensor type and indicates activation via an LED.\n2) A current limiter, designed to protect both the sensor and the tester from short circuits or wiring errors.\n3) A battery status indicator, based on a simple transistor stage with a Zener diode, allowing the user to know when the supply voltage drops below the operational threshold.\nDuring the design phase, various LTSpice simulations were used to accurately evaluate the circuit’s behavior under different operating conditions.",
     category: "Electronics, Automation",
@@ -233,6 +233,21 @@ const projects = [
 	year: 2026,
 	thumbnail: "assets/thumbnails/Li_ion_Resistance.png",
     github: " https://github.com/leochieco/Tutorials/tree/main/Li_Ion_Resistance_meter"
+  }    
+  
+   ,
+
+   {
+    id: "PS_PRE_REGULATOR",
+    title: "Measurement of the Internal Resistance of Lithium Batteries: Practical Implementation.",
+    description_brief: "This tutorial explains how to design a high-efficiency variable power supply using an LM2596-ADJ switching preregulator and an LM317 linear regulator. It shows how dynamic preregulation reduces power dissipation while maintaining the low-noise performance and stability of a linear supply.",
+    description: "This tutorial presents the design and analysis of a high-efficiency variable power supply based on a hybrid architecture<BR>that combines an LM2596-ADJ switching preregulator with an LM317 linear regulator.<BR> The article explains the operating principles of both stages, the design methodology, and the component selection process,<BR> highlighting how dynamic preregulation can significantly reduce power dissipation in the linear regulator while preserving<BR> the low noise and excellent voltage stability characteristic of linear supplies. The design is validated through LTspice <BR>simulations, providing insight into the system's dynamic behavior and overall performance."
+	category: "Electronics",
+	language: "English",
+    difficulty: "Advanced",
+	year: 2026,
+	thumbnail: "assets/thumbnails/ps_pre_regulator.png",
+    github: " https://github.com/leochieco/Tutorials/tree/main/PS_With_Pre_Regulator"
   }    
   
   
