@@ -249,6 +249,24 @@ const projects = [
 	thumbnail: "assets/thumbnails/ps_pre_regulator.png",
     github: " https://github.com/leochieco/Tutorials/tree/main/PS_With_Pre_Regulator"
   }    
+ 
+   ,
+
+   {
+    id: "FLUXGATE",
+    title: "Behavioral modeling of a Fluxgate current sensor in LTspice: From electromagnetism to circuit simulation.",
+    description_brief: "This tutorial presents a behavioral LTspice model of a Fluxgate current sensor, explaining its operating principles from electromagnetism to synchronous demodulation for accurate DC current measurement.",
+    description: "This tutorial explains the operating principle of a Fluxgate current sensor through a behavioral model implemented in LTspice.<BR>Starting from the fundamentals of electromagnetism, it develops a physically consistent simulation including the nonlinear B(H) characteristic,magnetic flux generation,<BR>Faraday's law, synchronous demodulation, and low-pass filtering, providing an educational bridge between theory and circuit simulation for accurate DC current measurement.",
+	category: "Electronics",
+	language: "Italian, English",
+    difficulty: "Intermediate",
+	year: 2026,
+	thumbnail: "assets/thumbnails/fluxgate.png",
+    github: " https://github.com/leochieco/Tutorials/tree/main/Fluxgate"
+  } 
+  
+  
+  
   
   
 ];
